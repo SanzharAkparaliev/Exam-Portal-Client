@@ -6,20 +6,23 @@
                     <img src="https://jyotish.com/wp-content/uploads/2021/05/Student-3-512.png" width="100px" style="background-color: white;" alt="logo">
                 </div>
                 <h1 class="text-center">Register Here !!</h1>
-                {{ user | json }}
+                <!-- {{ user | json }} -->
                 <form (ngSubmit) ="formSubmit()">
                     <!-- user name -->
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>User Name</mat-label>
                         <input 
+                        required
                         name="username"
                          [(ngModel)]="user.username" 
                           matInput placeholder="Enter here">
+                          <mat-hint>Username must be unique !!</mat-hint>
                     </mat-form-field>
                     <!-- password -->
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Password</mat-label>
                         <input
+                        required
                         name="password"
                         [(ngModel)] = "user.password" 
                         type="password" matInput 
@@ -29,6 +32,7 @@
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>First Name</mat-label>
                         <input
+                        required
                         name="firstName"
                         [(ngModel)] = "user.firstName" 
                         matInput placeholder="Enter here">
@@ -37,6 +41,7 @@
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Last Name</mat-label>
                         <input
+                        required
                         name="lastName"
                         [(ngModel)]="user.lastName" 
                         matInput placeholder="Enter here">
@@ -45,6 +50,7 @@
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Email Address</mat-label>
                         <input 
+                        required
                         name="email"
                         [(ngModel)]="user.email"
                         type="email" matInput placeholder="Enter here">
@@ -53,6 +59,7 @@
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Phone Number</mat-label>
                         <input 
+                        required
                         name="phone"
                         [(ngModel)]="user.phone"
                         type="number" matInput placeholder="Enter here">

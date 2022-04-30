@@ -12,6 +12,8 @@ import {MatInputModule} from '@angular/material/input';
 import { SignupComponent } from './pages/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   imports:[
@@ -20,6 +22,8 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     FormsModule,
     CommonModule,
+    HttpClientModule,
+    MatSnackBarModule,
   ],
   exports: [
     MatButtonModule,
@@ -27,10 +31,13 @@ import { CommonModule } from '@angular/common';
     MatInputModule,
     FormsModule,
     CommonModule,
+    HttpClientModule,
+    MatSnackBarModule,
   ],
   declarations:[SignupComponent],
 })
 export class MaterialModule {};
+
 
 @NgModule({
   declarations: [
@@ -44,7 +51,9 @@ export class MaterialModule {};
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    MatSnackBarModule
    
   ],
   providers: [],
