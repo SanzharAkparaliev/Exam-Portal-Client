@@ -10,18 +10,23 @@ import { AppRoutingModule } from './app-routing.module';
 import {MatFormFieldModule} from '@angular/material/form-field'; 
 import {MatInputModule} from '@angular/material/input'; 
 import { SignupComponent } from './pages/signup/signup.component';
-
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports:[
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule,
+    CommonModule,
   ],
   exports: [
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule,
+    CommonModule,
   ],
   declarations:[SignupComponent],
 })
@@ -38,6 +43,8 @@ export class MaterialModule {};
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
+    CommonModule
    
   ],
   providers: [],
