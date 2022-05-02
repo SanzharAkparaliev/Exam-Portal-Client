@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 import Swal from 'sweetalert2';
 
@@ -10,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class SignupComponent implements OnInit {
 
-  constructor(private userSerice:UserService,private snack:MatSnackBar) { }
+  constructor(private userSerice:UserService,private snack:MatSnackBar,private router:Router) { }
 
   public user = {
     username:'',
@@ -41,6 +42,7 @@ export class SignupComponent implements OnInit {
         console.log(data);
         //alert('sucess');
         Swal.fire('Successfully done !!','user id is '+ data.id ,'success')
+        this.router.navigate(['login'])
       },
       (error) => {
         console.log(error);

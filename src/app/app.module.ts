@@ -18,6 +18,9 @@ import { LoginComponent } from './pages/login/login.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import {MatIconModule} from '@angular/material/icon'; 
+import { authInterceptorProviders } from './services/auth.interseptor';
+import { DashbordComponent } from './pages/admin/dashbord/dashbord.component';
+import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 
 @NgModule({
   imports:[
@@ -40,7 +43,7 @@ import {MatIconModule} from '@angular/material/icon';
     MatSnackBarModule,
     MatCardModule,
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent],
 })
 export class MaterialModule {};
 
@@ -64,7 +67,7 @@ export class MaterialModule {};
     MatToolbarModule,
    MatIconModule,
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
