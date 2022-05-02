@@ -21,6 +21,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { authInterceptorProviders } from './services/auth.interseptor';
 import { DashbordComponent } from './pages/admin/dashbord/dashbord.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import {MatListModule} from '@angular/material/list';
+import { SidebarComponent } from './pages/admin/sidebar/sidebar.component'
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 @NgModule({
   imports:[
@@ -32,6 +36,9 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
     HttpClientModule,
     MatSnackBarModule,
     MatCardModule,
+    MatListModule,
+    MatIconModule,
+    RouterModule
   ],
   exports: [
     MatButtonModule,
@@ -42,8 +49,9 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
     HttpClientModule,
     MatSnackBarModule,
     MatCardModule,
+    MatListModule,
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent],
 })
 export class MaterialModule {};
 
@@ -66,6 +74,8 @@ export class MaterialModule {};
     MatCardModule,
     MatToolbarModule,
    MatIconModule,
+   MatListModule,
+
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
