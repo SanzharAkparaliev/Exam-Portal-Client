@@ -25,6 +25,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component'
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 
 @NgModule({
   imports:[
@@ -51,7 +52,7 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
     MatCardModule,
     MatListModule,
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent],
 })
 export class MaterialModule {};
 

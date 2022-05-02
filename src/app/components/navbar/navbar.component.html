@@ -21,7 +21,11 @@
 
     <button
     *ngIf="isLoggedIn && user"
+    routerLink="/admin/profile"
+    
      class="example-icon favorite-icon mr20" mat-button aria-label="Example icon-button with heart icon">
+
+     <mat-icon mat-list-icon>account_circle</mat-icon>
       {{login.getUser().username}}        
   </button>
 
