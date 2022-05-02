@@ -8,6 +8,10 @@ import baseUrl from './helper';
 export class LoginService {
 
   constructor(private http:HttpClient) { }
+  //current user: which is loggedin
+  public getCurrent(){
+    return this.http.get(`${baseUrl}/current-user`);
+  }
 
   //genarate token
   public generateToken(loginData:any){
