@@ -10,6 +10,8 @@ import { AdminGuard } from './services/admin.guard';
 import { NormalGuard } from './services/normal.guard';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ViewCategoryComponent } from './pages/admin/view-category/view-category.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 
 const routes:Routes = [
 {
@@ -40,6 +42,14 @@ const routes:Routes = [
     path:'profile',
     component:ProfileComponent,
     },
+    {
+      path:'categories',
+      component:ViewCategoryComponent,
+    },
+    {
+      path:'addcategories',
+      component:AddCategoryComponent
+    }
   ]
 },
 

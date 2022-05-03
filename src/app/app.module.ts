@@ -26,6 +26,9 @@ import {MatListModule} from '@angular/material/list';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component'
 import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { ViewCategoryComponent } from './pages/admin/view-category/view-category.component';
+import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
+import { TextFieldModule } from '@angular/cdk/text-field';
 
 @NgModule({
   imports:[
@@ -39,7 +42,8 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
     MatCardModule,
     MatListModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    TextFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -52,7 +56,7 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
     MatCardModule,
     MatListModule,
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent],
 })
 export class MaterialModule {};
 
@@ -76,6 +80,7 @@ export class MaterialModule {};
     MatToolbarModule,
    MatIconModule,
    MatListModule,
+   TextFieldModule
 
   ],
   providers: [authInterceptorProviders],
