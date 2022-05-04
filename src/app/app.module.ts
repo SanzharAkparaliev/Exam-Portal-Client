@@ -30,7 +30,9 @@ import { ViewCategoryComponent } from './pages/admin/view-category/view-category
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
-
+import { AddQuizComponent } from './pages/admin/add-quiz/add-quiz.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatSelectModule } from '@angular/material/select';
 @NgModule({
   imports:[
     MatButtonModule,
@@ -44,7 +46,9 @@ import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.co
     MatListModule,
     MatIconModule,
     RouterModule,
-    TextFieldModule
+    TextFieldModule,
+    MatSlideToggleModule,
+    MatSelectModule
   ],
   exports: [
     MatButtonModule,
@@ -56,8 +60,10 @@ import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.co
     MatSnackBarModule,
     MatCardModule,
     MatListModule,
+    
+
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent],
 })
 export class MaterialModule {};
 
@@ -81,8 +87,7 @@ export class MaterialModule {};
     MatToolbarModule,
    MatIconModule,
    MatListModule,
-   TextFieldModule
-
+   TextFieldModule,
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
