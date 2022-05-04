@@ -29,6 +29,7 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoryComponent } from './pages/admin/view-category/view-category.component';
 import { AddCategoryComponent } from './pages/admin/add-category/add-category.component';
 import { TextFieldModule } from '@angular/cdk/text-field';
+import { ViewQuizzesComponent } from './pages/admin/view-quizzes/view-quizzes.component';
 
 @NgModule({
   imports:[
@@ -56,7 +57,7 @@ import { TextFieldModule } from '@angular/cdk/text-field';
     MatCardModule,
     MatListModule,
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent],
 })
 export class MaterialModule {};
 
