@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { CategoryService } from 'src/app/services/category.service';
 import { QuizService } from 'src/app/services/quiz.service';
 import Swal from 'sweetalert2';
@@ -28,7 +29,10 @@ export class AddQuizComponent implements OnInit {
     }
   };
 
-  constructor(private _cat:CategoryService,private _snack:MatSnackBar,private _quiz:QuizService) { }
+  constructor(private _cat:CategoryService,
+    private _snack:MatSnackBar,
+    private _quiz:QuizService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this._cat.categories().subscribe((data:any) => {
@@ -47,13 +51,13 @@ export class AddQuizComponent implements OnInit {
       })
       return;
     }
-    if(this.quizData.maxMarks.trim() == '' || this.quizData.maxMarks == null){
+    if(this.quizData.maxMarks == '' || this.quizData.maxMarks == null){
       this._snack.open("Maximum Marks Required !!","",{
         duration:3000
       })
       return;
     }
-     if(this.quizData.numberOfQuestions.trim() == '' || this.quizData.numberOfQuestions == null){
+     if(this.quizData.numberOfQuestions == '' || this.quizData.numberOfQuestions == null){
       this._snack.open("Number Of Question Required !!","",{
         duration:3000
       })
@@ -79,6 +83,7 @@ export class AddQuizComponent implements OnInit {
           cid:''
         }
       };
+      this.router.navigate(['admin/quizzes'])
 
     },(error) => {
       Swal.fire('Error!!','Error while adding quiz','error');

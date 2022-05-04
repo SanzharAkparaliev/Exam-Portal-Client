@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { QuizService } from 'src/app/services/quiz.service';
 import Swal from 'sweetalert2';
 
@@ -22,7 +23,7 @@ export class ViewQuizzesComponent implements OnInit {
     }
   ]
 
-  constructor(private _quiz:QuizService) { }
+  constructor(private _quiz:QuizService,private router:Router) { }
 
   ngOnInit(): void {
     this._quiz.quizzes().subscribe(
@@ -35,6 +36,27 @@ export class ViewQuizzesComponent implements OnInit {
         Swal.fire('Error !',"Error in loading data !",'error');
       }
     )
+  }
+
+  deleteQuiz(qId:any){
+    Swal.fire({
+      icon:"info",
+      title:'Are you sure ?',
+      confirmButtonText:'Delete',
+      showCancelButton:true,
+    }).then((result:any) => {
+      if(result.isConfirmed){
+        this._quiz.deleteQuiz(qId).subscribe(
+          (data) => {
+            this.quizzes = this.quizzes.filter((quiz:any) => quiz.qId != qId);
+            Swal.fire('Success','Quiz deleted ', 'success');
+          },
+          (error) =>{
+            Swal.fire('Error','Error in deleting quiz','error');
+          }
+        )
+      }
+    })
   }
 
 }
