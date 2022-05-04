@@ -68,6 +68,7 @@ export class AddQuizComponent implements OnInit {
       this._snack.open("Category have selected !!","",{
         duration:3000
       })
+      return;
     }
 
     this._quiz.addQuiz(this.quizData).subscribe((data) => {
