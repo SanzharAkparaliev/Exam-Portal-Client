@@ -36,7 +36,7 @@ import {MatSelectModule } from '@angular/material/select';
 import { UpdateQuizComponent } from './pages/admin/update-quiz/update-quiz.component';
 import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questions.component';
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
-
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 @NgModule({
   imports:[
     MatButtonModule,
@@ -52,7 +52,8 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
     RouterModule,
     TextFieldModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    CKEditorModule
   ],
   exports: [
     MatButtonModule,
@@ -92,6 +93,7 @@ export class MaterialModule {};
    MatIconModule,
    MatListModule,
    TextFieldModule,
+   CKEditorModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
