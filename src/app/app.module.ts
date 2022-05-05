@@ -38,6 +38,7 @@ import { ViewQuestionsComponent } from './pages/admin/view-questions/view-questi
 import { AddQuestionComponent } from './pages/admin/add-question/add-question.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { UpdateCategoryComponent } from './pages/admin/update-category/update-category.component';
+import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 @NgModule({
   imports:[
     MatButtonModule,
@@ -69,7 +70,7 @@ import { UpdateCategoryComponent } from './pages/admin/update-category/update-ca
     
 
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent, UpdateQuizComponent, ViewQuestionsComponent, AddQuestionComponent, UpdateCategoryComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent, UpdateQuizComponent, ViewQuestionsComponent, AddQuestionComponent, UpdateCategoryComponent, UpdateQuestionComponent],
 })
 export class MaterialModule {};
 

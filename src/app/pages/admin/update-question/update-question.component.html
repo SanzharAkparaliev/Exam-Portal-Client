@@ -1,7 +1,7 @@
 <div class="bootsrap-wrapper">
     <div class="row mt20">
         <div class="col-md-12">
-            <h1>Add Question to <span style="font-weight: bold;">{{qTitle}} </span></h1>
+            <h1>Update Question to <span style="font-weight: bold;">{{qTitle}} </span></h1>
             <mat-card>
                 <mat-card-header>
                     <mat-card-subtitle>
@@ -9,7 +9,7 @@
                     </mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
-                    <form class="mt20" (ngSubmit)="formSubmit()" >
+                    <form class="mt20" (ngSubmit)="updateQuestion()">
                         <!-- content filed -->
                         <!-- <mat-form-field class="w100">
                             <mat-label>Write question content</mat-label>
@@ -25,9 +25,9 @@
                          ></ckeditor>
                        <!-- options -->
                        <div class="row">
-                           <div class="col-md-6">
+                           <div class="col-md-6 mt20">
                                <!-- option1 -->
-                               <mat-form-field class="w100 mt20">
+                               <mat-form-field class="w100">
                                   <mat-label>Enter Option1</mat-label>
                                   <input
                                   required 
