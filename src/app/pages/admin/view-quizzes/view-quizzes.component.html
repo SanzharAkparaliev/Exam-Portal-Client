@@ -1,3 +1,7 @@
+
+<div class="container text-center mt20">
+    <button mat-raised-button color="primary" routerLink="/admin/addquiz">Add New Quiz</button>
+</div>
 <mat-card class="mt10 mr20 ml20" *ngFor="let q of quizzes">
     <!-- {{ q | json }} -->
     <mat-card-header>
@@ -29,7 +33,3 @@
         <button mat-flat-button color="warn" class="ml20" (click)="deleteQuiz(q.qid)">Delete</button>
     </mat-card-actions>
 </mat-card>
-
-<div class="container text-center mt20">
-    <button mat-raised-button color="primary" routerLink="/admin/addquiz">Add New Quiz</button>
-</div>
