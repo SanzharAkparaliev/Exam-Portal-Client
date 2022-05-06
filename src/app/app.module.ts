@@ -40,7 +40,8 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { UpdateCategoryComponent } from './pages/admin/update-category/update-category.component';
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import { SidebarComponent as UserSidebar} from './pages/user/sidebar/sidebar.component';
-import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component'
+import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { InstructionsComponent } from './pages/user/instructions/instructions.component'
 
 @NgModule({
   imports:[
@@ -73,7 +74,7 @@ import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component'
     
 
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent, UpdateQuizComponent, ViewQuestionsComponent, AddQuestionComponent, UpdateCategoryComponent, UpdateQuestionComponent,UserSidebar, LoadQuizComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent, UpdateQuizComponent, ViewQuestionsComponent, AddQuestionComponent, UpdateCategoryComponent, UpdateQuestionComponent,UserSidebar, LoadQuizComponent, InstructionsComponent],
 })
 export class MaterialModule {};
 
