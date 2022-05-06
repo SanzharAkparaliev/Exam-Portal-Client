@@ -1,0 +1,12 @@
+.truncate{
+    display: block;
+    white-space: nowrap;
+    width: 100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+.question-image{
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQggFGBmIkLZAaOocIQ4Vm7mWEJvr6vrapaoA&usqp=CAU");
+    background-size:cover ;
+}
