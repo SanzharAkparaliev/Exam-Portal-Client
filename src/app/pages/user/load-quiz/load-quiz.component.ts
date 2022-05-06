@@ -27,7 +27,11 @@ export class LoadQuizComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.catId = this._route.snapshot.params['catId'];
+    this._route.params.subscribe((params) =>{
+      console.log(params);
+      this.catId = params['catId'];
+
+
     if(this.catId == 0){
       this._quiz.quizzes().subscribe(
         (data:any) =>{
@@ -38,8 +42,17 @@ export class LoadQuizComponent implements OnInit {
         }
       )
     }else{
-
+      this._quiz.getQuizOfCategory(this.catId).subscribe(
+        (data:any) => {
+          this.quizzes = data
+        },(error) => {
+          alert("error in loading quiz")
+        }
+      )
     }
+    })
+
+
   }
 
 }
