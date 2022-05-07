@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { QuizService } from 'src/app/services/quiz.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-instructions',
@@ -23,6 +24,7 @@ export class InstructionsComponent implements OnInit {
   };
   constructor(
     private _quiz:QuizService,
+    private _rout:Router,
     private _route:ActivatedRoute,
   ) { }
 
@@ -37,6 +39,22 @@ export class InstructionsComponent implements OnInit {
         alert("Error in loading quiz data")
       }
     )
+  }
+
+  public startQuiz(){
+    Swal.fire({
+      title:'Do you want to start the quiz',
+      showCancelButton:true,
+      confirmButtonText:'Start',
+      denyButtonText:'Cancel',
+      icon:'info'
+    }).then((result) => {
+      if(result.isConfirmed){
+        this._rout.navigate(['/start/' + this.qid])
+      }else if(result.isDenied){
+        
+      }
+    })
   }
 
 }

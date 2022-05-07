@@ -41,7 +41,8 @@ import { UpdateCategoryComponent } from './pages/admin/update-category/update-ca
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import { SidebarComponent as UserSidebar} from './pages/user/sidebar/sidebar.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
-import { InstructionsComponent } from './pages/user/instructions/instructions.component'
+import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component'
 
 @NgModule({
   imports:[
@@ -74,7 +75,15 @@ import { InstructionsComponent } from './pages/user/instructions/instructions.co
     
 
   ],
-  declarations:[SignupComponent, HomeComponent,LoginComponent, DashbordComponent, UserDashboardComponent, ProfileComponent, SidebarComponent, WelcomeComponent, ViewCategoryComponent, AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent, UpdateQuizComponent, ViewQuestionsComponent, AddQuestionComponent, UpdateCategoryComponent, UpdateQuestionComponent,UserSidebar, LoadQuizComponent, InstructionsComponent],
+  declarations:[SignupComponent, HomeComponent,LoginComponent,
+    DashbordComponent, UserDashboardComponent, ProfileComponent,
+    SidebarComponent, WelcomeComponent, ViewCategoryComponent,
+    AddCategoryComponent, ViewQuizzesComponent, AddQuizComponent,
+    UpdateQuizComponent, ViewQuestionsComponent, 
+    AddQuestionComponent, UpdateCategoryComponent,
+    UpdateQuestionComponent,UserSidebar, LoadQuizComponent,
+    InstructionsComponent,
+    StartComponent],
 })
 export class MaterialModule {};
 

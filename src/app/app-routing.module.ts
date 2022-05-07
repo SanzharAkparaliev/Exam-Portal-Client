@@ -21,6 +21,7 @@ import { UpdateCategoryComponent } from './pages/admin/update-category/update-ca
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
+import { StartComponent } from './pages/user/start/start.component';
 
 const routes:Routes = [
 {
@@ -97,12 +98,18 @@ const routes:Routes = [
     {
       path:':catId',
       component:LoadQuizComponent 
-    },
+    }, 
     {
-    path:':instructions/:qid',
+    path:'instructions/:qid',
     component:InstructionsComponent 
     },
+    
   ]
+},
+{
+path:'start/:qid',
+component:StartComponent,
+canActivate:[NormalGuard],
 }
 
 ];

@@ -31,7 +31,6 @@ export class LoadQuizComponent implements OnInit {
       console.log(params);
       this.catId = params['catId'];
 
-
     if(this.catId == 0){
       this._quiz.getActiveQuizzes().subscribe(
         (data:any) =>{
